@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Challenges</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .challenge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .challenge:hover {
+            transform: scale(1.05);
+        }
+        .glitch {
+            display: inline-block;
+            font-size: 1.2em;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red, -2px -2px blue; }
+            50% { text-shadow: -2px -2px red, 2px 2px blue; }
+            100% { text-shadow: 2px -2px blue, -2px 2px red; }
+        }
+        .stalker {
+            color: red;
+        }
+        .phish {
+            color: blue;
+        }
+        a {
+            color: cyan;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cybersecurity Challenges</h1>
+    
+    <div class="challenge">
+        <h2>Be The '<span class="stalker">Stalker</span>'</h2>
+        <p class="glitch">Using cybersecurity skill 'OSINT', find the information about the Person Of Interest, and breach into the crypto vault. Leverage the information on vault webpage to narrow down the scope.</p>
+        <a href="https://mrinj3ctor.github.io/mrinj3ctor/BeTheStalker/index.html" target="_blank">Start Challenge</a>
+    </div>
+    
+    <div class="challenge">
+        <h2>Spot The '<span class="phish">Phish</span>'</h2>
+        <p class="glitch">Using ability of observing, spot the phishing email between these 5 sample of email, there's 1 phishing email and others are valid emails. To differentiate, look for suspicious points within the email. In order to win, you have to provide a strong reason why it's a phishing email.</p>
+        <a href="https://mrinj3ctor.github.io/mrinj3ctor/SpotThePhish/index.html" target="_blank">Start Challenge</a>
+    </div>
+</body>
+</html>
