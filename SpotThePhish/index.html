@@ -56,35 +56,9 @@
             font-size: 14px;
             color: #555;
         }
-        #fullscreen-toggle {
-            margin: 10px;
-            padding: 10px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        /* Fullscreen Mode */
-        .fullscreen {
-            display: flex;
-            flex-direction: row;
-            overflow-x: auto;
-            width: 100vw;
-            height: 100vh;
-            background: #000;
-            align-items: center;
-        }
-        .fullscreen .email-container {
-            flex: 0 0 100vw;
-            height: 100vh;
-            margin: 0;
-            border-radius: 0;
-        }
     </style>
 </head>
 <body>
-    <button id="fullscreen-toggle">Enable Fullscreen Mode</button>
     <div id="email-list">
         <div class="email-container">
             <div class="email-header">Inbox</div>
@@ -95,7 +69,7 @@
                 <div class="email-attachment">📎 Employee_Code_Of_Conduct.pdf (3MB)</div>
             </div>
         </div>
-           <div class="email-container">
+            <div class="email-container">
         <div class="email-header">Inbox</div>
         <div class="email-body">
             <div class="email-subject">Subject: Megah Holding Sdn. Bhd. 50$ Billion Proposal</div>
@@ -167,11 +141,5 @@
         </div>
     </div>
     </div>
-
-    <script>
-        document.getElementById('fullscreen-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('fullscreen');
-        });
-    </script>
 </body>
 </html>
