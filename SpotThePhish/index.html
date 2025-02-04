@@ -10,16 +10,17 @@
             background-color: #f2f2f2;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            gap: 15px; /* Add space between boxes */
+            padding: 10px;
         }
         .email-container {
-            width: 600px;
+            width: 90%;
+            max-width: 600px;
             background: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
+            margin-bottom: 15px;
         }
         .email-header {
             background: #db4437;
@@ -55,27 +56,46 @@
             font-size: 14px;
             color: #555;
         }
+        #fullscreen-toggle {
+            margin: 10px;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /* Fullscreen Mode */
+        .fullscreen {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            align-items: center;
+        }
+        .fullscreen .email-container {
+            flex: 0 0 100vw;
+            height: 100vh;
+            margin: 0;
+            border-radius: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="email-container">
-        <div class="email-header">Inbox</div>
-        <div class="email-body">
-            <div class="email-subject">Subject: Updated Employee Code of Conduct Policy - Action Required</div>
-            <div class="email-sender">From: Legal Department &lt;legal@redtify-commercial.com&gt;</div>
-            <div class="email-content">Dear Bob,<br><br>
-
-                As part of our ongoing commitment to workplace compliance, we have updated our Employee Code of Conduct in alignment with new labor regulations.<br><br>
-                
-                Please review the updated policy and acknowledge your acceptance by signing the attached document and returning it by Monday, 12th February.<br><br>
-                
-                Best regards,<br>
-                Legal Team<br>
-                Redtify Commercial</div>
-            <div class="email-attachment">📎 Employee_Code_Of_Conduct.pdf (3MB)</div>
+    <button id="fullscreen-toggle">Enable Fullscreen Mode</button>
+    <div id="email-list">
+        <div class="email-container">
+            <div class="email-header">Inbox</div>
+            <div class="email-body">
+                <div class="email-subject">Subject: Updated Employee Code of Conduct Policy</div>
+                <div class="email-sender">From: Legal Department &lt;legal@redtify-commercial.com&gt;</div>
+                <div class="email-content">Please review the updated policy...</div>
+                <div class="email-attachment">📎 Employee_Code_Of_Conduct.pdf (3MB)</div>
+            </div>
         </div>
-    </div>
-    <div class="email-container">
+           <div class="email-container">
         <div class="email-header">Inbox</div>
         <div class="email-body">
             <div class="email-subject">Subject: Megah Holding Sdn. Bhd. 50$ Billion Proposal</div>
@@ -146,5 +166,12 @@
             <div class="email-attachment">📎 receipt.pdf (512KB)</div>
         </div>
     </div>
+    </div>
+
+    <script>
+        document.getElementById('fullscreen-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('fullscreen');
+        });
+    </script>
 </body>
 </html>
